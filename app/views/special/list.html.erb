@@ -1,0 +1,34 @@
+<% @page_title = "Admin Users List" %>
+<br>
+<%= link_to image_tag("back_icon.png", :border=>0), {:controller =>'access',:action => 'menu' }, :class => 'back-link'%>
+<%= link_to('Back to Menu', {:controller => 'access', :action => 'menu'}) %>
+
+
+  <h2>Specials</h2>
+<br>
+  <%= link_to image_tag("plus_icon.jpg", :border=>0), {:action => 'new' }, :class => 'action-new'%>
+  <%= link_to('Add New Special', {:action => 'new'},:class =>'action-new1') %>
+
+  <div class="found"><%= pluralize(@special.size, 'special') %> found</div>
+  
+  <table class="listing" summary="Specials">
+    <tr>
+      <th>Day</th>
+      <th>Special</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+    <% @special.each do |sp| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= sp.day %></td>
+      <td><%= sp.special %></td>
+      <td><%= sp.price %></td>
+      <td class="actions">
+        <%= link_to('Edit', {:action => 'edit', :id => sp.id}, :class => 'action edit') %>
+        <%= link_to('Delete', {:action => 'delete', :id => sp.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+<br>
+</div>

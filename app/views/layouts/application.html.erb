@@ -1,0 +1,49 @@
+<%= render(:partial => "userlogin")%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Ervs Cafe</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <%= stylesheet_link_tag "default" %>
+  <%= stylesheet_link_tag "layout" %>
+  <%= javascript_include_tag :defaults%>
+
+</head>
+<body class="bg1">
+  <div id="wrapper" class="bg2">
+    <div id="logo">
+      <h1>Erv's Cafe</h1>
+      <h2>7th floor of the PNC Bank tower</h2>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="/"              id="menu1" accesskey="1" title=""><span>Homepage</span></a></li>
+        <li><a href="/page/menu"     id="menu2" accesskey="2" title=""><span>Menu</span></a></li>
+        <li><a href="/page/location" id="menu3" accesskey="3" title=""><span>Location</span></a></li>
+        <li><a href="/contact"       id="menu4" accesskey="4" title=""><span>Contact Us</span></a></li>
+      </ul>
+    </div>
+    <div id="content" class="bg3">
+      <%= yield %>
+    </div>
+    <div id="footer" class="bg5">
+      <p class="text4">Copyright (c) 2010 Erv's Cafe. All rights reserved.</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17200026-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<% @page_title = "Admin Users List" %>
+<br>
+<%= link_to image_tag("back_icon.png", :border=>0), {:controller =>'access',:action => 'menu' }, :class => 'back-link'%>
+<%= link_to('Back to Menu', {:controller => 'access', :action => 'menu'}) %>
+
+<div class="section list">
+<div class="user list">
+  <h2>Admin Users</h2>
+	<br>
+
+  <%= link_to image_tag("plus_icon.jpg", :border=>0), {:action => 'new' }, :class => 'action-new'%>
+  <%= link_to('Add New Admin User', {:action => 'new'},:class =>'action-new1') %>
+  <div class="found"><%= pluralize(@admin_users.size, 'admin user') %> found</div>
+  
+  <table class="listing" summary="Admin users list">
+    <tr>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    <% @admin_users.each do |admin_user| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= admin_user.username %></td>
+      <td><%= admin_user.name %></td>
+      <td><%= mail_to(admin_user.email) %></td>
+      <td class="actions">
+        <%= link_to('Edit', {:action => 'edit', :id => admin_user.id}, :class => 'action edit') %>
+        <%= link_to('Delete', {:action => 'delete', :id => admin_user.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+<br>
+</div>

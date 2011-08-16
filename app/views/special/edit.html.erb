@@ -1,0 +1,13 @@
+<% @page_title = "Edit Special: #{@special.day}" -%>
+
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="specialedit">
+  <h2>Edit Special</h2>
+  <%= form_for(:special, :url => {:action => 'update', :id => @special.id}) do |f| %>
+  	<%= render(:partial => 'form', :locals => {:f => f} ) %>
+  	<div class="form-buttons">
+  	  <%= submit_tag('Update Special') %>
+    </div>
+  <% end %>
+</div>

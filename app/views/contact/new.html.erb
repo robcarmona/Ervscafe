@@ -1,0 +1,43 @@
+<div class="bg4">
+  <div id="left">
+    <div id="box1">
+      <h2 class="text1">Contact Us</h2>
+      <% [:error, :warning, :notice, :message].each do |key| %>
+        <%= content_tag :div, flash[key], :id => 'flash-' + key.to_s if flash[key] %>
+      <% end %>
+      <% form_for @contact, :url => contact_path do |c| %>
+        <dl>
+          <dt><%= c.label :name %></dt>
+          <dd><%= c.text_field :name %></dd>
+        </dl>
+        <dl>
+          <dt><%= c.label :email %></dt>
+          <dd><%= c.text_field :email %></dd>
+        </dl>
+        <dl>
+          <dt><%= c.label :phone %></dt>
+          <dd><%= c.text_field :phone %></dd>
+        </dl>
+        <dl>
+          <dt><%= c.label :content, "Questions/Comments" %></dt>
+          <dd><%= c.text_area :content %></dd>
+        </dl>
+        <%= c.submit "Send" %>
+      <% end %>
+    </div>
+  </div>
+  <div id="right">
+    <div id="box3">
+      <h2 class="text2">Location and Hours</h2>
+      <div class="content">
+        <p><strong>110 West Berry, Suite 700<br>
+          Fort Wayne, IN 46802<br>
+          (260) 420-3729</strong></p>
+        <p>Located on the 7th floor of the PNC Bank tower, Erv's cafe sits within easy walking distance of downtown Fort Wayne. You can use the main building entrance on W Berry or the parking garage entrance off Calhoun.</p>
+        <p>Our hours are Monday through Friday from 7:00am until 3:00pm.</p>
+      </div>
+    </div>
+    <div id="box4"><iframe width="242" height="190" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=128+West+Berry+Street,+Fort+Wayne,+IN&amp;sll=41.079249,-85.139892&amp;sspn=0.007643,0.008272&amp;ie=UTF8&amp;hq=&amp;hnear=128+W+Berry+St,+Fort+Wayne,+Allen,+Indiana+46802&amp;ll=41.079319,-85.140352&amp;spn=0.006146,0.010343&amp;z=15&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=128+West+Berry+Street,+Fort+Wayne,+IN&amp;sll=41.079249,-85.139892&amp;sspn=0.007643,0.008272&amp;ie=UTF8&amp;hq=&amp;hnear=128+W+Berry+St,+Fort+Wayne,+Allen,+Indiana+46802&amp;ll=41.079319,-85.140352&amp;spn=0.006146,0.010343&amp;z=15" style="color:#0000FF;text-align:left">View Larger Map</a></small></div>
+  </div>
+  <div style="clear: both;">&nbsp;</div>
+</div>

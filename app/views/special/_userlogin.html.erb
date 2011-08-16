@@ -1,0 +1,6 @@
+<% if  session[:user_id] != nil%>
+<p id ="stat">You are currently logged in</p>
+<%= link_to image_tag("logout.png", :border=>0), {:controller =>'access',:action => 'logout' }, :class => 'LoginMessage',
+:onclick => "toggle('LoginMessage');"%>
+<%= link_to image_tag("settings.png", :border=>0), {:controller =>'access',:action => 'menu' }, :class => 'LoginMessage2'%>
+<% end %>

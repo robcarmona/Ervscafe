@@ -1,0 +1,17 @@
+<% @page_title = 'Create Special' %>
+
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="user new">
+  <h2>Create Special</h2>
+
+  <%= form_for(:special, :url => {:action => 'create'}) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f} ) %>
+  
+    <div class="form-buttons">
+      <%= submit_tag('Create Special') %>
+    </div>
+  
+  <% end %>
+</div>

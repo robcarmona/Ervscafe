@@ -1,0 +1,140 @@
+/** BASIC */
+
+html, body {
+	height: 100%;
+}
+
+.text1 {
+	margin-bottom: 10px;
+}
+
+.text2 {
+	margin-bottom: 10px;
+}
+
+/** WRAPPER */
+
+#wrapper {
+}
+
+/** LOGO */
+
+#logo {
+	width: 648px;
+	height: 154px;
+	margin: 0px auto;
+	background: url(/images/homepage03.jpg) no-repeat left top;
+}
+
+#logo h1, #logo h2 {
+	display: none;
+}
+
+/** MENU */
+
+#menu {
+	width: 648px;
+	height: 31px;
+	margin: 0px auto;
+	background: url(/images/homepage05.jpg) no-repeat right top;
+}
+
+#menu ul {
+	height: 31px;
+	margin: 0px;
+	padding: 0px 0px 0px 52px;
+	background: url(/images/homepage04.jpg) no-repeat left top;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 31px;
+}
+
+#menu span {
+	display: none;
+}
+
+#menu1 {
+	width: 143px;
+	background: url(/images/homepage06.jpg) no-repeat left top;
+}
+
+#menu2 {
+	width: 130px;
+	background: url(/images/homepage07.jpg) no-repeat left top;
+}
+
+#menu3 {
+	width: 130px;
+	background: url(/images/homepage08.jpg) no-repeat left top;
+}
+
+#menu4 {
+	width: 130px;
+	background: url(/images/homepage09.jpg) no-repeat left top;
+}
+
+/** CONTENT */
+
+#content {
+	width: 648px;
+	margin: 0px auto;
+}
+
+#left {
+	float: left;
+	width: 300px;
+	padding-left: 37px;
+}
+
+#right {
+	float: right;
+	width: 242px;
+	padding-right: 35px;
+}
+
+/** FOOTER */
+
+#footer {
+	width: 648px;
+	height: 100px;
+	margin: 0px auto;
+	padding-top: 50px;
+}
+
+/** BOX1 */
+
+#box1 {
+	padding: 40px 0px 0px 0px;
+}
+
+/** BOX2 */
+
+#box2 {
+	padding: 20px 0px 0px 0px;
+}
+
+/** BOX3 */
+
+#box3 {
+	padding: 49px 0px 0px 0px;
+}
+
+/** BOX4 */
+
+#box4 {
+	padding: 30px 0px 0px 0px;
+}
+
+/** BOX5 */
+
+#box5 {
+	padding: 40px 38px 0px 38px;
+}

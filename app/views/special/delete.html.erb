@@ -1,0 +1,19 @@
+<% @page_title = "Delete Special: #{@special.day}" %>
+
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="special delete">
+  <h2>Delete Special</h2>
+  <br>
+  <%= form_for(:special, :url => {:action => 'destroy', :id => @special.id}) do |f| -%>
+
+    <p id="rusure">Are you sure you want to permanently delete this special?</p>
+  
+    <p id="reference-name"><%= @special.day %></p>
+  
+    <div class="form-buttons">
+      <%= submit_tag("Delete Special") %>
+    </div>
+    
+  <% end %>
+</div>
